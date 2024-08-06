@@ -2,28 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: #000;
+  background: rgb(254 251 236);
+  font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
 @layer utilities {
@@ -31,3 +17,322 @@ body {
     text-wrap: balance;
   }
 }
+
+.catSwiper .swiper-button-next,
+.catSwiper .swiper-button-prev {
+  height: 0% !important;
+  font-size-adjust: from-font !important;
+  opacity: 0 !important;
+  transition: opacity 0.3s !important;
+}
+
+.catSwiper:hover .swiper-button-next,
+.catSwiper:hover .swiper-button-prev {
+  opacity: 1 !important;
+}
+
+.newsSwiper .swiper-button-next,
+.newsSwiper .swiper-button-prev {
+  font-size-adjust: from-font !important;
+}
+
+@media (max-width: 480px) {
+
+  .newsSwiper .swiper-button-next,
+  .newsSwiper .swiper-button-prev {
+    opacity: 0;
+  }
+}
+
+/* .swiper-button-next,
+.swiper-button-prev {
+  opacity: 0 !important;
+  transition: opacity 0.3s !important;
+}
+
+.mySwiper:hover .swiper-button-next,
+.mySwiper:hover .swiper-button-prev {
+  opacity: 1 !important;
+} */
+
+
+.swiper-wrapper {
+  margin-bottom: 50px !important;
+}
+
+.swiper-button-prev {
+  color: rgb(80, 78, 5) !important;
+}
+
+.swiper-button-next {
+  color: rgb(80, 78, 5) !important;
+}
+
+.index__swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+/* Increase Pagination Bullet Size */
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  opacity: 1 !important;
+  background-color: #3f3e3e !important;
+}
+
+/* Change Selected Pagination Color */
+.swiper-pagination-bullet-active {
+  background-color: #e50505 !important;
+}
+
+.portfolio .swiper-pagination-bullet {
+  background-color: #D0D5DD !important;
+}
+
+.portfolio .swiper-pagination-bullet-active {
+  background-color: #667085 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer Css */
+.footer {
+
+  ul,
+  ol {
+    list-style: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+  }
+
+  .grid-wrapper {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    height: 250px;
+    background-color: #f4f4f4;
+    position: relative;
+  }
+
+  .grid-wrapper .single-grid {
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    max-width: 25%;
+    height: 100%;
+    -webkit-transition: .5s width;
+    transition: .5s width;
+    overflow: hidden;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .grid-wrapper .single-grid:hover {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .grid-wrapper .single-grid:hover .content-block {
+    padding: 20px 1% 20px 4%;
+    background: #fefbec;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 1;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    max-width: 50%;
+    -webkit-transition: .5s width;
+    transition: .5s width;
+    position: static;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .grid-wrapper .single-grid:hover .image-block::before {
+    background: #ebf5efc5;
+  }
+
+  .grid-wrapper .single-grid .image-block {
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    height: 100%;
+    -webkit-transition: .5s width;
+    transition: .5s width;
+    overflow: hidden;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    overflow: visible;
+  }
+
+  .grid-wrapper .single-grid .image-block::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .grid-wrapper .single-grid .image-block::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%) translateX(100%);
+    transform: translateY(-50%) translateX(100%);
+    height: 40px;
+    width: 20px;
+    background: rgba(189, 166, 155, 0.75);
+    -webkit-clip-path: polygon(0 0, 0% 100%, 100% 50%);
+    clip-path: polygon(0 0, 0% 100%, 100% 50%);
+  }
+
+  .grid-wrapper .single-grid .image-block .tittle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: #fff;
+  }
+
+  .grid-wrapper .single-grid .image-block img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  .grid-wrapper .single-grid .content-block {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-transition: .5s width;
+    transition: .5s width;
+    background-color: #000;
+    color: rgb(0, 0, 0);
+  }
+
+  .grid-wrapper .single-grid .content-block ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    list-style: none;
+    width: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  /*# sourceMappingURL=style.css.map */
+}
+
+/* Footer Css End */
