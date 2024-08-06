@@ -105,7 +105,7 @@ const Footer = () => {
           <div className="flex flex-col items-center mb-6">
             <img src="./images/Logo-bg-yellow.png" alt="Logo" className="h-14 mb-3" />
             <h4 className="text-xl font-bold mb-2">Nir Galleria</h4>
-            <p className="text-gray-500 text-center">Hand-crafted rope items, women's sarees, jewelry, and home decor items.</p>
+            <p className="text-gray-500 text-center">Hand-crafted rope items, women&apos;s sarees, jewelry, and home decor items.</p>
           </div>
           <div className="grid grid-cols-2 gap-4 text-center mb-6">
             <div>
