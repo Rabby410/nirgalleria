@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react';
-import ProductBox from '../../Common/productbox'
 import Products from '../../constants/products';
+import ProductBox from '../../common/productbox';
 
 const NewArrivelsTab = () => {
     const [activeTab, setActiveTab] = useState('new');
