@@ -9,7 +9,7 @@ html {
 body {
   color: #000;
   background: rgb(254 251 236);
-  font-family: Verdana, Geneva, Tahoma, sans-serif
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 @layer utilities {
@@ -37,24 +37,11 @@ body {
 }
 
 @media (max-width: 480px) {
-
   .newsSwiper .swiper-button-next,
   .newsSwiper .swiper-button-prev {
     opacity: 0;
   }
 }
-
-/* .swiper-button-next,
-.swiper-button-prev {
-  opacity: 0 !important;
-  transition: opacity 0.3s !important;
-}
-
-.mySwiper:hover .swiper-button-next,
-.mySwiper:hover .swiper-button-prev {
-  opacity: 1 !important;
-} */
-
 
 .swiper-wrapper {
   margin-bottom: 50px !important;
@@ -86,86 +73,15 @@ body {
 }
 
 .portfolio .swiper-pagination-bullet {
-  background-color: #D0D5DD !important;
+  background-color: #d0d5dd !important;
 }
 
 .portfolio .swiper-pagination-bullet-active {
   background-color: #667085 !important;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Footer Css */
 .footer {
-
   ul,
   ol {
     list-style: none;
@@ -200,8 +116,8 @@ body {
     flex: 1;
     max-width: 25%;
     height: 100%;
-    -webkit-transition: .5s width;
-    transition: .5s width;
+    -webkit-transition: 0.5s width;
+    transition: 0.5s width;
     overflow: hidden;
     cursor: pointer;
     display: -webkit-box;
@@ -231,8 +147,8 @@ body {
     -ms-flex: 1;
     flex: 1;
     max-width: 50%;
-    -webkit-transition: .5s width;
-    transition: .5s width;
+    -webkit-transition: 0.5s width;
+    transition: 0.5s width;
     position: static;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -249,8 +165,8 @@ body {
     -ms-flex: 1;
     flex: 1;
     height: 100%;
-    -webkit-transition: .5s width;
-    transition: .5s width;
+    -webkit-transition: 0.5s width;
+    transition: 0.5s width;
     overflow: hidden;
     cursor: pointer;
     display: -webkit-box;
@@ -310,8 +226,8 @@ body {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    -webkit-transition: .5s width;
-    transition: .5s width;
+    -webkit-transition: 0.5s width;
+    transition: 0.5s width;
     background-color: #000;
     color: rgb(0, 0, 0);
   }

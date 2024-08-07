@@ -4,7 +4,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
-import { FaAward, FaCircle, FaPen, FaCrop } from 'react-icons/fa';
+import { FaAward, FaPenNib } from 'react-icons/fa';
+import { FaCrop } from "react-icons/fa6";
+import { MdOutlineEco } from "react-icons/md";
+
 
 const showcaseProduct = {
     name: "Showcase Product",
@@ -20,12 +23,12 @@ const showcaseProduct = {
             description: "Meticulously handcrafted for unique beauty."
         },
         {
-            icon: <FaCircle className="text-4xl" />,
+            icon: <MdOutlineEco className="text-4xl" />,
             title: "Eco-Friendly Materials",
             description: "Made with sustainable and natural fibers."
         },
         {
-            icon: <FaPen className="text-4xl" />,
+            icon: <FaPenNib className="text-4xl" />,
             title: "Artistic Design",
             description: "Inspired by modern and traditional art."
         },
@@ -48,11 +51,13 @@ const ProductShowcaseSlider = () => {
                 centeredSlides={true}
                 navigation={true}
                 modules={[Navigation]}
-                className="mb-8"
+                className="showcaseSlider mb-8"
             >
                 {showcaseProduct.images.map((image, index) => (
                     <SwiperSlide key={index} className="flex justify-center">
-                        <img src={image} alt={`Showcase ${index + 1}`} className="w-full max-w-[300px] h-auto object-contain" />
+                        <div style={{textAlign:"-webkit-center"}}>
+                            <img src={image} alt={`Showcase ${index + 1}`} className="w-full max-w-[300px] h-auto object-contain" />
+                        </div>
                     </SwiperSlide>
                 ))}
             </Swiper>

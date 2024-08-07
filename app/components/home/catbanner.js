@@ -6,7 +6,7 @@ const CatBanner = () => {
             <div className="py-10 bg-primary">
                 <div className="container mx-auto px-5">
                     <div className="grid grid-cols-1 lg:grid-cols-2">
-                        <div>
+                        <div className="justify-self-center">
                             <img
                                 src="./images/home/catbanner/carten.png"
                                 alt=" carten nir galleria"
