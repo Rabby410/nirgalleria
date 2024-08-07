@@ -15,7 +15,7 @@ const NewArrivelsTab = () => {
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`px-4 py-2 mx-2 text-lg font-semibold ${activeTab === tab ? 'text-white bg-secendary' : 'text-third bg-white'} rounded-lg shadow-lg transition`}
+            className={`px-4 py-2 mx-2 text-sm md:text-lg font-semibold ${activeTab === tab ? 'text-white bg-secendary' : 'text-third bg-white'} rounded-lg shadow-lg transition`}
           >
             {tab.charAt(0).toUpperCase() + tab.slice(1)}
           </button>

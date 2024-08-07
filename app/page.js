@@ -10,6 +10,9 @@ import MostPopular from "./components/home/mostPopular";
 import NewArrivels from "./components/home/newArrivels";
 import InstagramPosts from "./components/home/instagramPosts";
 import ProductShowcase from "./components/home/productShowcase";
+import MotoBanner from "./components/home/motoBanner";
+import Newsletter from "./components/home/newsletter";
+import BagShowcase from "./components/home/bagShowcase";
 
 export default function Home() {
   return (
@@ -25,6 +28,9 @@ export default function Home() {
       <MostPopular/>
       <InstagramPosts/>
       <ProductShowcase/>
+      <MotoBanner/>
+      <BagShowcase/>
+      <Newsletter/>
     </>
   );
 }
