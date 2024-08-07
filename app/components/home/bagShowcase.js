@@ -15,15 +15,15 @@ const BagShowcase = () => {
                     </div>
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 justify-items-center'>
                         <div className='flex flex-row md:flex-col gap-5 justify-self-end pr-5'>
-                            <div><img src="./images/home/bagShowcase/bag1.jpg" alt="" className='w-[200px] h-[250px]' /></div>
-                            <div><img src="./images/home/bagShowcase/bag2.jpg" alt="" className='w-[200px] h-[250px]' /></div>
+                            <div><img src="./images/home/bagshowcase/bag1.jpg" alt="" className='w-[200px] h-[250px]' /></div>
+                            <div><img src="./images/home/bagshowcase/bag2.jpg" alt="" className='w-[200px] h-[250px]' /></div>
                         </div>
                         <div>
-                            <img src="./images/home/bagShowcase/Authentic-bags.jpeg" alt="" className='w-auto h-[520px]' />
+                            <img src="./images/home/bagshowcase/Authentic-bags.jpeg" alt="" className='w-auto h-[520px]' />
                         </div>
                         <div className='flex flex-row md:flex-col gap-5 justify-self-start pl-5' >
-                            <div><img src="./images/home/bagShowcase/bag3.jpg" alt="" className='w-[200px] h-[250px]' /></div>
-                            <div><img src="./images/home/bagShowcase/bag5.jpg" alt="" className='w-[200px] h-[250px]' /></div>
+                            <div><img src="./images/home/bagshowcase/bag3.jpg" alt="" className='w-[200px] h-[250px]' /></div>
+                            <div><img src="./images/home/bagshowcase/bag5.jpg" alt="" className='w-[200px] h-[250px]' /></div>
                         </div>
                     </div>
                 </div>
