@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link'
 import React from 'react'
 import { FaFacebook, FaInstagram, FaTwitter, FaPinterest } from "react-icons/fa";
@@ -13,7 +14,7 @@ const Footer = () => {
               <div className="grid-wrapper">
                 <div className="single-grid">
                   <div className="image-block">
-                    <img decoding="async" src="./images/Logo-bg-yellow.png" alt="" />
+                  <Image src="/images/Logo-bg-yellow.png" alt="Logo" width={600} height={100} className="h-14 mb-3" />
                     <h4 className="tittle">Who we are</h4>
                   </div>
                   <div className="content-block">
@@ -30,7 +31,14 @@ const Footer = () => {
                 </div>
                 <div className="single-grid">
                   <div className="image-block">
-                    <img decoding="async" src="./images/layouts/footer/f2.jpg" alt="" /><p></p>
+                    <Image
+                      decoding="async"
+                      src="/images/layouts/footer/f2.jpg"
+                      alt="Categories"
+                      width={600} // Adjust as needed
+                      height={100} // Adjust as needed
+                    />
+                    <p></p>
                     <h4 className="tittle">Categories</h4>
                   </div>
                   <div className="content-block">
@@ -47,7 +55,13 @@ const Footer = () => {
                 </div>
                 <div className="single-grid">
                   <div className="image-block">
-                    <img decoding="async" src="./images/layouts/footer/f3.jpg" alt="" /><p></p>
+                  <Image
+                      decoding="async"
+                      src="/images/layouts/footer/f3.jpg"
+                      alt="Categories"
+                      width={600} // Adjust as needed
+                      height={100} // Adjust as needed
+                    /><p></p>
                     <h4 className="tittle">Customer Service</h4>
                   </div>
                   <div className="content-block">
@@ -67,7 +81,13 @@ const Footer = () => {
                 </div>
                 <div className="single-grid">
                   <div className="image-block">
-                    <img decoding="async" src="./images/layouts/footer/f4.jpg" alt="" /><p></p>
+                    <Image
+                      decoding="async"
+                      src="/images/layouts/footer/f4.jpg"
+                      alt="Categories"
+                      width={600} // Adjust as needed
+                      height={100} // Adjust as needed
+                    /><p></p>
                     <h4 className="tittle">More</h4>
                   </div>
                   <div className="content-block">
@@ -82,28 +102,28 @@ const Footer = () => {
             </div>
           </div>
           <div>
-          <div className="container mx-auto flex px-5 justify-between items-center text-sm text-gray-500">
-            <p>© {(new Date().getFullYear())} Powered by NirGalleria</p>
-            <h5 className='flex items-center justify-center gap-2'>Deleveloped by <Link href="https://ideasui.com" className='flex items-center gap-2 hover:scale-110 duration-300'><img src="https://www.ideasui.com/logo-owl-removebg.png" alt="IdeasUi" className="h-8" /> IDEASUI</Link></h5>
-            <div className='flex gap-3 items-center justify-center'>
-              <h5 className="font-semibold">Follow Us :</h5>
-              <ul className="flex justify-center space-x-4">
-                <li className='hover:scale-150 duration-300'><Link href="#"><FaFacebook /></Link></li>
-                <li className='hover:scale-150 duration-300'><Link href="#"><FaInstagram /></Link></li>
-                <li className='hover:scale-150 duration-300'><Link href="#"><FaTwitter /></Link></li>
-                <li className='hover:scale-150 duration-300'><Link href="#"><FaPinterest /></Link></li>
-              </ul>
+            <div className="container mx-auto flex px-5 justify-between items-center text-sm text-gray-500">
+              <p>© {(new Date().getFullYear())} Powered by NirGalleria</p>
+              <h5 className='flex items-center justify-center gap-2'>Deleveloped by <Link href="https://ideasui.com" className='flex items-center gap-2 hover:scale-110 duration-300'><img src="https://www.ideasui.com/logo-owl-removebg.png" alt="IdeasUi" className="h-8" /> IDEASUI</Link></h5>
+              <div className='flex gap-3 items-center justify-center'>
+                <h5 className="font-semibold">Follow Us :</h5>
+                <ul className="flex justify-center space-x-4">
+                  <li className='hover:scale-150 duration-300'><Link href="#"><FaFacebook /></Link></li>
+                  <li className='hover:scale-150 duration-300'><Link href="#"><FaInstagram /></Link></li>
+                  <li className='hover:scale-150 duration-300'><Link href="#"><FaTwitter /></Link></li>
+                  <li className='hover:scale-150 duration-300'><Link href="#"><FaPinterest /></Link></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-        </div>
-        
+
       </div>
 
       <footer className="bg-secendary text-black py-6 md:hidden">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center mb-6">
-            <img src="./images/Logo-bg-yellow.png" alt="Logo" className="h-14 mb-3" />
+            <Image src="/images/Logo-bg-yellow.png" alt="Logo" width={100} height={100} className="h-14 mb-3" />
             <h4 className="text-xl font-bold mb-2">Nir Galleria</h4>
             <p className="text-gray-500 text-center">Hand-crafted rope items, women&apos;s sarees, jewelry, and home decor items.</p>
           </div>
