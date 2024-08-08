@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "./components/layout/header";
 import Footer from "./components/layout/footer";
 import BackToTop from "./components/common/backToTop";
+import Loader from "./components/common/loader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <Header/>
+        <Loader/>
         {children}
         <BackToTop/>
         <Footer/>
