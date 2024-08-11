@@ -93,8 +93,8 @@ const Footer = () => {
                   <div className="content-block">
                     <ul>
                       <li><a href=""> Privacy Policy</a></li>
-                      <li><a href=""> Find A Store</a></li>
-                      <li><a href=""> Terms &amp; Conditions</a></li>
+                      <li><a href="/location"> Find A Store</a></li>
+                      <li><a href="/terms-and-condition"> Terms &amp; Conditions</a></li>
                     </ul>
                   </div>
                 </div>
