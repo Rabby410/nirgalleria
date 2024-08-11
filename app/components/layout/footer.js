@@ -14,7 +14,7 @@ const Footer = () => {
               <div className="grid-wrapper">
                 <div className="single-grid">
                   <div className="image-block">
-                  <Image src="/images/Logo-bg-yellow.png" alt="Logo" width={600} height={100} className="h-14 mb-3" />
+                  <Image src="/images/Logo-bg-yellow.png" alt="Logo" width={800} height={100} className="h-14 mb-3" />
                     <h4 className="tittle">Who we are</h4>
                   </div>
                   <div className="content-block">
@@ -123,7 +123,7 @@ const Footer = () => {
       <footer className="bg-secendary text-black py-6 md:hidden">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center mb-6">
-            <Image src="/images/Logo-bg-yellow.png" alt="Logo" width={100} height={100} className="h-14 mb-3" />
+            <Image src="/images/logo.png" alt="Logo" width={100} height={100} className="mb-3" />
             <h4 className="text-xl font-bold mb-2">Nir Galleria</h4>
             <p className="text-gray-500 text-center">Hand-crafted rope items, women&apos;s sarees, jewelry, and home decor items.</p>
           </div>
