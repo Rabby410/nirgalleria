@@ -75,7 +75,7 @@ const MobileMenu = () => {
               Services
             </Link>
             <Link
-              href="/contact"
+              href="/location"
               className="p-4 text-lg font-semibold"
               onClick={toggleMenu}
             >

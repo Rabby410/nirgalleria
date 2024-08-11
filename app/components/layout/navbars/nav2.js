@@ -8,6 +8,7 @@ import { AiOutlineProduct } from 'react-icons/ai';
 import { IoSearchOutline } from 'react-icons/io5';
 import { FaMapLocationDot } from 'react-icons/fa6';
 import Image from 'next/image';
+import ContactModal from '../../modals/contactModal';
 
 const menuItems = [
   {
@@ -176,10 +177,7 @@ const Nav2 = () => {
             <FaEye />
             <span className="group-hover:text-orange-500 transition duration-300">Recent Views</span>
           </Link>
-          <Link href="/contact" className="flex gap-2 justify-center items-center text-lg text-white hover:scale-110 hover:transition-transform duration-300">
-            <FaMapLocationDot />
-            <span className="group-hover:text-orange-500 transition duration-300">Contact Us</span>
-          </Link>
+          <div><ContactModal/></div>
         </div>
       </div>
     </div>
