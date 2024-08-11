@@ -12,11 +12,6 @@ import ContactModal from '../../modals/contactModal';
 
 const menuItems = [
   {
-    label: 'Home',
-    href: '/',
-    icon: <FaHome />,
-  },
-  {
     label: 'Product Line',
     href: '/products',
     icon: <AiOutlineProduct />,
@@ -113,6 +108,7 @@ const Nav2 = () => {
     <div className="py-4 bg-secendary hidden md:block">
       <div className="container mx-auto flex justify-between items-center gap-5 px-5">
         <div className="flex gap-5 justify-center items-center w-1/3 cursor-pointer">
+          <Link href="/" className="flex gap-2 justify-center items-center text-lg text-white cursor-pointer hover:scale-125 hover:transition-transform duration-300"><FaHome /> Home</Link>
           {menuItems.map(item => (
             <div
               key={item.label}
@@ -121,6 +117,7 @@ const Nav2 = () => {
               onMouseLeave={handleMouseLeave}
               onClick={() => handleMenuClick(item.label)}
             >
+
               <div className="flex gap-2 justify-center items-center text-lg text-white cursor-pointer">
                 {item.icon}
                 <span className="group-hover:text-orange-500 transition duration-300">{item.label}</span>
@@ -166,18 +163,19 @@ const Nav2 = () => {
               )}
             </div>
           ))}
+          <Link href="/blog" className="flex gap-2 justify-center items-center text-lg text-white cursor-pointer hover:scale-125 hover:transition-transform duration-300"> Eco Time</Link>
+
         </div>
-        <Link href="/" className='w-1/3' style={{textAlign: '-webkit-center'}}>
+        <Link href="/" className='w-1/3' style={{ textAlign: '-webkit-center' }}>
           <Image src="/images/logo.png" alt="Nir Galleria" width='110' height='50' />
-          {/* <img src="/images/logo.png" alt="Nir Galleria" className="h-20" /> */}
         </Link>
         <div className="flex gap-5 justify-center items-center w-1/3">
-          <IoSearchOutline className='text-2xl text-white hover:scale-125 hover:transition-transform duration-300'/>
+          <IoSearchOutline className='text-2xl text-white hover:scale-125 hover:transition-transform duration-300' />
           <Link href="/recent-views" className="flex gap-2 justify-center items-center text-lg text-white hover:scale-110 hover:transition-transform duration-300">
-            <FaEye />
             <span className="group-hover:text-orange-500 transition duration-300">Recent Views</span>
           </Link>
-          <div><ContactModal/></div>
+          <div><ContactModal /></div>
+          <Link href="/location" className='text-lg text-white hover:scale-110 hover:transition-transform duration-300'>Find A Store</Link>
         </div>
       </div>
     </div>

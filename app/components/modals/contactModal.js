@@ -12,7 +12,6 @@ export default function ContactModal() {
   return (
     <div>
       <Link href="#" onClick={openModal} className="flex gap-2 md:justify-center items-center md:text-lg text-black md:text-white hover:scale-110 hover:transition-transform duration-300">
-        <FaMapMarkerAlt className='hidden md:block' />
         <span className="group-hover:text-orange-500 transition duration-300">Contact Us</span>
       </Link>
 

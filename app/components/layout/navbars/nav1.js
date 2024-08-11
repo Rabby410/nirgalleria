@@ -12,7 +12,7 @@ const Nav1 = () => {
                 <Link href="tel:+8801682903051">+880 1682-903051</Link>
             </div>
             <div className="flex flex-row justify-center items-center text-secendary gap-3">
-                <Link href="#">Login/Register</Link>
+                <Link href="/my-account">Login/Register</Link>
                 <FaHeart className="text-md"/>
                 <div className="flex flex-row justify-center items-center">
                 <FaShoppingCart className="text-md"/>
