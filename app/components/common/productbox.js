@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { AiOutlineHeart, AiOutlineEye } from "react-icons/ai";
 import { IoIosGitCompare } from "react-icons/io";
@@ -6,9 +7,11 @@ const ProductBox = ({ product }) => {
     return (
         <div className="relative p-5 group rounded-lg overflow-hidden">
             <div className="relative z-10">
-                <img
+                <Image
                     src={product.image}
                     alt={product.name}
+                    width="400"
+                    height="60"
                     className="w-full h-60 object-cover rounded-md transition duration-300 transform group-hover:scale-105"
                 />
             </div>

@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import ProductBox from '@/app/components/common/productbox';
 import Products from '@/app/components/constants/products';
-import { FaThList, FaThLarge } from 'react-icons/fa';
+import { FaThList, FaThLarge, FaBars } from 'react-icons/fa'; // Added FaBars for the hamburger menu
 import { TfiLayoutGrid4Alt } from 'react-icons/tfi';
 import { BsFillGrid3X3GapFill } from 'react-icons/bs';
 import Breadcrumb from '../../../components/shop/breadcrumb';
@@ -39,6 +39,7 @@ const ShopPage = ({ params }) => {
   const [itemsPerPage, setItemsPerPage] = useState(9);
   const [activeCategory, setActiveCategory] = useState(params.submenu || '');
   const [activeSubcategory, setActiveSubcategory] = useState(params.childmenu || '');
+  const [sidebarOpen, setSidebarOpen] = useState(false); // State to manage sidebar visibility
 
   useEffect(() => {
     if (params.childmenu) {
@@ -60,6 +61,8 @@ const ShopPage = ({ params }) => {
     setActiveSubcategory(subcategory);
     router.push(`/shop/${activeCategory.toLowerCase()}/${subcategory.toLowerCase().replace(' ', '_')}`);
   };
+
+  const toggleSidebar = () => setSidebarOpen(!sidebarOpen); // Toggle sidebar visibility
 
   const filterProducts = () => {
     let filteredProducts = Products;
@@ -97,9 +100,17 @@ const ShopPage = ({ params }) => {
 
   return (
     <>
-    <Breadcrumb/>
+      <Breadcrumb />
+
+      <div className="lg:hidden flex justify-end p-4">
+        <button onClick={toggleSidebar} className="text-2xl">
+          <FaBars />
+        </button>
+      </div>
+
       <div className="flex flex-col lg:flex-row">
-        <aside className="w-full lg:w-1/4 p-4 bg-gray-200 border-r border-gray-300">
+        {/* Sidebar */}
+        <aside className={`w-full lg:w-1/4 p-4 bg-gray-200 border-r border-gray-300 lg:block ${sidebarOpen ? 'block' : 'hidden'}`}>
           <h2 className="text-lg font-bold mb-4">Filters</h2>
           <div className="space-y-4">
             {categories.map(category => (
@@ -127,9 +138,10 @@ const ShopPage = ({ params }) => {
           </div>
         </aside>
 
+        {/* Main Content */}
         <main className="w-full lg:w-3/4 p-4">
           <div className="flex justify-between items-center mb-4">
-            <div className="flex space-x-4 items-center">
+            <div className="flex flex-col md:flex-row space-x-4 items-center">
               <label htmlFor="itemsPerPage">Show</label>
               <select
                 id="itemsPerPage"
@@ -144,7 +156,7 @@ const ShopPage = ({ params }) => {
               </select>
             </div>
 
-            <div className="flex space-x-4 items-center">
+            <div className="space-x-4 items-center hidden md:flex">
               <button
                 className={`p-2 ${grid === 2 ? 'bg-gray-300' : 'bg-white'}`}
                 onClick={() => handleGridChange(2)}
@@ -165,7 +177,7 @@ const ShopPage = ({ params }) => {
               </button>
             </div>
 
-            <div className="flex items-center space-x-4">
+            <div className="flex flex-col md:flex-row items-center space-x-4">
               <label htmlFor="sort">Sort by</label>
               <select
                 id="sort"
@@ -182,7 +194,9 @@ const ShopPage = ({ params }) => {
             </div>
           </div>
 
-          <div className={`grid gap-4 ${grid === 2 ? 'grid-cols-2' : grid === 3 ? 'grid-cols-3' : grid === 4 ? 'grid-cols-4' : 'grid-cols-1'}`}>
+          {/* Product Grid */}
+          <div className={`grid grid-cols-1 gap-4 md:${grid === 2 ? 'grid-cols-2' : grid === 3 ? 'grid-cols-3' : grid === 4 ? 'grid-cols-4' : 'grid-cols-1'} 
+            sm:grid-cols-2 md:grid-cols-${grid} lg:grid-cols-${grid}`}>
             {filteredProducts.slice(0, itemsPerPage).map((product) => (
               <ProductBox key={product.id} product={product} />
             ))}

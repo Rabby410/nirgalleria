@@ -7,6 +7,7 @@ import { FaHome, FaEye, FaChevronDown, FaChevronUp, FaChevronLeft, FaChevronRigh
 import { AiOutlineProduct } from 'react-icons/ai';
 import { IoSearchOutline } from 'react-icons/io5';
 import { FaMapLocationDot } from 'react-icons/fa6';
+import Image from 'next/image';
 
 const menuItems = [
   {
@@ -110,7 +111,7 @@ const Nav2 = () => {
   return (
     <div className="py-4 bg-secendary hidden md:block">
       <div className="container mx-auto flex justify-between items-center gap-5 px-5">
-        <div className="flex gap-5 justify-center items-center w-1/3">
+        <div className="flex gap-5 justify-center items-center w-1/3 cursor-pointer">
           {menuItems.map(item => (
             <div
               key={item.label}
@@ -166,7 +167,8 @@ const Nav2 = () => {
           ))}
         </div>
         <Link href="/" className='w-1/3' style={{textAlign: '-webkit-center'}}>
-          <img src="/images/logo.png" alt="Nir Galleria" className="h-20" />
+          <Image src="/images/logo.png" alt="Nir Galleria" width='110' height='50' />
+          {/* <img src="/images/logo.png" alt="Nir Galleria" className="h-20" /> */}
         </Link>
         <div className="flex gap-5 justify-center items-center w-1/3">
           <IoSearchOutline className='text-2xl text-white hover:scale-125 hover:transition-transform duration-300'/>

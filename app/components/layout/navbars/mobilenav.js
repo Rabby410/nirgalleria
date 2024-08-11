@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { HiMenu, HiX, HiChevronDown, HiChevronUp } from "react-icons/hi";
 import Link from "next/link";
+import Image from "next/image";
 
 const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,7 +31,8 @@ const MobileMenu = () => {
         </button>
 
         <div>
-          <img src="./images/logo.png" alt="logo" className="w-[60px] pt-2" />
+          <Image src="/images/logo.png" alt="logo" width="60" height="100"  className="pt-2" />
+          {/* <img src="./images/logo.png" alt="logo" className="w-[60px] pt-2" /> */}
         </div>
       </div>
 
@@ -97,7 +99,7 @@ const MobileMenu = () => {
                   className="p-3 text-md flex justify-between items-center cursor-pointer"
                   onClick={() => toggleSubCategory("category1")}
                 >
-                  Women Attire
+                  <Link href="/shop/women">Women Attire</Link>
                   {expandedSubCategory === "category1" ? (
                     <HiChevronUp />
                   ) : (
@@ -107,21 +109,21 @@ const MobileMenu = () => {
                 {expandedSubCategory === "category1" && (
                   <div className="pl-6 flex flex-col">
                     <Link
-                      href="/category1/sub1"
+                      href="/shop/jewellary"
                       className="p-2 text-sm"
                       onClick={toggleMenu}
                     >
                       Jewellary
                     </Link>
                     <Link
-                      href="/category1/sub2"
+                      href="/shop/sharee"
                       className="p-2 text-sm"
                       onClick={toggleMenu}
                     >
                       Saree
                     </Link>
                     <Link
-                      href="/category1/sub2"
+                      href="/shop/3-pic"
                       className="p-2 text-sm"
                       onClick={toggleMenu}
                     >
@@ -133,7 +135,7 @@ const MobileMenu = () => {
                   className="p-3 text-md flex justify-between items-center cursor-pointer"
                   onClick={() => toggleSubCategory("category2")}
                 >
-                  Dinning
+                  <Link href="/shop/dinning">Dinning</Link>
                   {expandedSubCategory === "category2" ? (
                     <HiChevronUp />
                   ) : (
@@ -143,7 +145,7 @@ const MobileMenu = () => {
                 {expandedSubCategory === "category2" && (
                   <div className="pl-6 flex flex-col">
                     <Link
-                      href="/category2/sub1"
+                      href="/shop/table-runner"
                       className="p-2 text-sm"
                       onClick={toggleMenu}
                     >
@@ -155,7 +157,7 @@ const MobileMenu = () => {
                   className="p-3 text-md flex justify-between items-center cursor-pointer"
                   onClick={() => toggleSubCategory("category3")}
                 >
-                  Home Furnishers
+                 <Link href="/shop/hand_crafted">Hand Crafted</Link>
                   {expandedSubCategory === "category3" ? (
                     <HiChevronUp />
                   ) : (
@@ -165,11 +167,11 @@ const MobileMenu = () => {
                 {expandedSubCategory === "category3" && (
                   <div className="pl-6 flex flex-col">
                     <Link
-                      href="/category3/sub1"
+                      href="/shop/hand_crafted"
                       className="p-2 text-sm"
                       onClick={toggleMenu}
                     >
-                      Hand Crafted
+                      Mirror
                     </Link>
                   </div>
                 )}

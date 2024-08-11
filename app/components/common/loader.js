@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 
 const Loader = () => {
@@ -18,10 +19,12 @@ const Loader = () => {
             <div className="flex items-center justify-center h-screen bg-gray-100">
                 <div className="relative flex items-center justify-center">
                     <div className="absolute w-[200px] h-[200px] border-4 border-t-blue-500 border-r-transparent border-b-transparent border-l-transparent border-solid rounded-full animate-spin"></div>
-                    <img
+                    <Image
                         src="/images/logo.png"
                         alt="Loading"
-                        className="relative w-[200px] h-[160px] z-10"
+                        width='200'
+                        height="160"
+                        className="relative z-10"
                     />
                 </div>
             </div>
