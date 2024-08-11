@@ -70,11 +70,11 @@ const Footer = () => {
                       <li><a href=""> Fabric care</a></li>
                       <li><a href=""> Billing &amp; Payments</a></li>
                       <li><a href=""> Corporate sales</a></li>
-                      <li><a href=""> Shipping &amp; Delivery</a></li>
+                      <li><a href="/shipping-delivery"> Shipping &amp; Delivery</a></li>
                       <li><a href=""> My Rewards</a></li>
                       <li><a href=""> Track my order</a></li>
-                      <li><a href=""> Return &amp; Exchanges</a></li>
-                      <li><a href=""> Contact US</a></li>
+                      <li><a href="/exchange-refund-policy"> Return &amp; Exchanges</a></li>
+                      <li><a href="/contact-us"> Contact Us</a></li>
                       <li><a href=""> FAQs</a></li>
                     </ul>
                   </div>
@@ -134,7 +134,7 @@ const Footer = () => {
                 <li className="mb-1"><Link href="#">About Us</Link></li>
                 <li className="mb-1"><Link href="#">Categories</Link></li>
                 <li className="mb-1"><Link href="#">Customer Service</Link></li>
-                <li className="mb-1"><Link href="#">Contact Us</Link></li>
+                <li className="mb-1"><Link href="/contact-us">Contact Us</Link></li>
               </ul>
             </div>
             <div>
