@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { AiOutlineHeart, AiOutlineEye } from "react-icons/ai";
 import { IoIosGitCompare } from "react-icons/io";
@@ -7,13 +8,16 @@ const ProductBox = ({ product }) => {
     return (
         <div className="relative p-5 group rounded-lg overflow-hidden">
             <div className="relative z-10">
-                <Image
-                    src={product.image}
-                    alt={product.name}
-                    width="400"
-                    height="60"
-                    className="w-full h-60 object-cover rounded-md transition duration-300 transform group-hover:scale-105"
-                />
+                <Link
+                    href={`/shop/${product.category}${product.subCategory ? `/${product.subCategory}` : '/null'}/${product.id}`}>
+                    <Image
+                        src={product.image}
+                        alt={product.name}
+                        width="400"
+                        height="60"
+                        className="w-full h-60 object-cover rounded-md transition duration-300 transform group-hover:scale-105"
+                    />
+                </Link>
             </div>
             <div className="p-2">
                 <div className="mt-3">
@@ -42,9 +46,11 @@ const ProductBox = ({ product }) => {
                         <button className="text-white rounded-xl py-2 px-3 bg-secendary hover:bg-green-400 transition duration-300">
                             Add to Cart
                         </button>
-                        <button className="text-white rounded-full py-2 px-3 bg-gray-800 hover:bg-green-700 transition duration-300">
-                            <AiOutlineEye />
-                        </button>
+                        <Link href={`/shop/${product.category}${product.subCategory ? `/${product.subCategory}` : '/null'}/${product.id}`}>
+                            <button className="text-white rounded-full py-2 px-3 bg-gray-800 hover:bg-green-700 transition duration-300">
+                                <AiOutlineEye />
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>

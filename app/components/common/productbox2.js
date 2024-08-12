@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { FaCartPlus, FaEye, FaExchangeAlt, FaHeart } from "react-icons/fa";
 
@@ -6,15 +7,16 @@ const Productbox2 = ({ product }) => {
   return (
     <div className="relative group">
       <div className="relative">
-        <Image src={product.image} alt={product.name} width="500" height="500" className="w-full" />
+        <Link href={`/shop/${product.category}${product.subCategory ? `/${product.subCategory}` : '/null'}/${product.id}`}><Image src={product.image} alt={product.name} width="500" height="500" className="w-full" /></Link>
         <div className="absolute bottom-0 left-0 right-0 flex justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <div className="flex gap-4 p-4">
             <button className="text-white">
               <FaCartPlus size={24} />
             </button>
-            <button className="text-white">
+            <Link href={`/shop/${product.category}${product.subCategory ? `/${product.subCategory}` : '/null'}/${product.id}`}> <button className="text-white">
               <FaEye size={24} />
             </button>
+            </Link>
             <button className="text-white">
               <FaExchangeAlt size={24} />
             </button>
