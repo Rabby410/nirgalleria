@@ -5,12 +5,14 @@ import Link from 'next/link';
 import { FaCheck, FaTimes, FaPlus, FaMinus, FaRegHeart, FaFacebook, FaInstagram, FaTwitter, FaPinterest, FaStar } from 'react-icons/fa';
 import { IoIosGitCompare } from "react-icons/io";
 import Image from 'next/image';
+import { useCart } from '@/app/context/cartContext'; // Import your cart context
 
 const Product = ({ params }) => {
     const [activeTab, setActiveTab] = useState('description');
     const { id } = params;
     const product = Products.find(product => product.id === parseInt(id));
     const [quantity, setQuantity] = useState(1);
+    const { addToCart } = useCart(); // Destructure addToCart from cart context
 
     if (!product) {
         return <div>Product not found</div>;
@@ -29,13 +31,15 @@ const Product = ({ params }) => {
     };
 
     const handleAddToCart = () => {
-        // Logic to add the product to the cart with the specified quantity
-        console.log(`Added ${quantity} of ${product.name} to the cart`);
+        if (product.stock > 0) {
+            addToCart({ ...product, quantity }); // Add product with quantity to cart
+            console.log(`Added ${quantity} of ${product.name} to the cart`);
+        }
     };
 
     const starCount = 5; // Total number of stars
-    const fullStars = Math.floor(`${product.rating}`); // Number of full stars
-    const hasHalfStar = (`${product.rating}`) % 1 >= 0.5
+    const fullStars = Math.floor(product.rating); // Number of full stars
+    const hasHalfStar = product.rating % 1 >= 0.5
 
     return (
         <>
@@ -165,36 +169,19 @@ const Product = ({ params }) => {
                                                 Your message (optional)
                                                 <span className='text-red-500'>*</span>
                                             </label>
-                                            <textarea rows="5" type="subject" name='subject' placeholder='' className='px-2 py-2 border rounded-xl' />
+                                            <textarea
+                                                id="message"
+                                                className="border border-gray-300 p-2 rounded"
+                                                rows="4"
+                                            />
+                                            <button className="bg-green-500 text-white p-2 rounded mt-2">
+                                                Submit Review
+                                            </button>
                                         </div>
-
-                                        <div className="flex flex-col mt-5">
-                                            <label htmlFor="name" className='pb-2'>
-                                                Name
-                                                <span className='text-red-500'>*</span>
-                                            </label>
-                                            <input type="name" name='name' placeholder='' className='px-2 py-2 border rounded-xl' required />
-                                        </div>
-
-                                        <div className="flex flex-col mt-5">
-                                            <label htmlFor="email" className='pb-2'>
-                                                Email
-                                                <span className='text-red-500'>*</span>
-                                            </label>
-                                            <input type="email" name='email' placeholder='' className='px-2 py-2 border rounded-xl' required />
-                                        </div>
-                                        <div>
-                                            <label className='flex gap-2 items-center pt-2'>
-                                                <input type="checkbox" />Save my name, email, and website in this browser for the next time I comment.
-                                            </label>
-                                        </div>
-                                        <button className='mt-5 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition duration-300'>
-                                            Submit
-                                        </button>
                                     </div>
                                 </div>
-
-                            </div>}
+                            </div>
+                        }
                     </div>
                 </div>
             </div>
